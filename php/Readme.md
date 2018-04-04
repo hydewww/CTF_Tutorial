@@ -17,7 +17,7 @@ $param = serialize($a);
 echo $param;
 ```
 
-O:4:"what":2:{s:8:"filename";s:8:"flag.php";s:4:"text";s:14:"??!!@@$$5%%???";}
+O:4:"what":2:{s:8:"filename";s:8:"flag.txt";s:4:"text";s:14:"??!!@@$$5%%???";}
 
 ## 正则
 
