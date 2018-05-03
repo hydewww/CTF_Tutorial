@@ -1,0 +1,83 @@
+source_code:
+  build: basic/source_code/.
+  restart: always
+  ports:
+    - "5001:80"
+
+cookie:
+  build: basic/cookie/.
+  restart: always
+  ports:
+    - "5002:80"
+
+http_header:
+  build: basic/http_header/.
+  restart: always
+  ports:
+    - "5003:80"
+
+basic_sql:
+  build: sql/basic_sql/.
+  restart: always
+  ports:
+    - "5004:80"
+
+robots:
+  build: basic/robots/.
+  restart: always
+  ports:
+    - "5005:80"
+
+weak_type:
+  build: php/weak_type/.
+  restart: always
+  ports:
+    - "5006:80"
+
+get:
+  build: basic/get/.
+  restart: always
+  ports:
+    - "5007:80"
+
+post:
+  build: basic/post/.
+  restart: always
+  ports:
+    - "5008:80"
+
+unserialize:
+  build: php/unserialize/.
+  restart: always
+  ports:
+    - "5009:80"
+
+basic_xss:
+  build: xss/basic_xss/.
+  restart: always
+  ports:
+    - "5010:80"
+
+form_input:
+  build: basic/form_input/.
+  restart: always
+  ports:
+    - "5011:80"
+
+local_file_inclusioin:
+  build: php/local_file_inclusion/.
+  restart: always
+  ports:
+    - "5012:80"
+
+multibyte_sql:
+  build: sql/multibyte/.
+  restart: always
+  ports:
+    - "5013:80"
+
+rpo:
+  build: web/rpo/.
+  restart: always
+  ports:
+    - "5014:80"
