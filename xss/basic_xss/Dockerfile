@@ -49,11 +49,12 @@ RUN curl -sL https://deb.nodesource.com/setup_8.x | bash - \
     && rm -rf /var/lib/apt/lists/* \
     && npm install -g --unsafe-perm moment node-schedule
 
-RUN npm install -g --unsafe-perm puppeteer && \
-	chmod -R 777 /usr/lib/node_modules/puppeteer/.local-chromium
+RUN npm install -g --unsafe-perm puppeteer@1.2.0 --ignore-scripts
 
+ADD chrome-linux_543305.tar.gz /usr/lib/node_modules/puppeteer/
 COPY data.sql /tmp/data.sql
-RUN service mysql start && \
+RUN chmod -R 777 /usr/lib/node_modules/puppeteer/.local-chromium && \
+    service mysql start && \
     mysql -uroot < /tmp/data.sql
 
 COPY html/ /var/www/html/
